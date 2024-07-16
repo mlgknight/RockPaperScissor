@@ -1,0 +1,93 @@
+body{
+    background-color: #F5F5F5;
+    font-family: "Press Start 2P", system-ui;
+    user-select: none;
+    
+}
+
+.logo{
+    line-height: 50px;
+    font-weight: 900;
+}
+
+.intro-message{
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.box{
+    background-color: rgb(34, 32, 32);
+    color: white;
+    border: 5px solid rgb(235, 171, 9);
+    border-radius: 40px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+
+.labels{
+    margin: 30px 0px;
+    justify-content: center;
+    display: flex;
+    gap: 200px
+}
+
+.label1{
+    margin-right: 35px;
+}
+
+.label2{
+    margin-right: 20px;
+}
+
+.btm-things{
+    text-align: center;
+}
+
+button{
+    padding: 20px 50px;
+    background-color: rgb(34, 32, 32);
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 1px 7px;
+}
+
+button:hover{
+    background-color: rgb(235, 171, 9);
+}
+
+#player-choice{
+    font-size: 50px;
+}
+
+#CPU-choice{
+    font-size: 50px;
+}
+
+.btm-text{
+    font-size: 30px;
+}
+
+
+.green{
+    color: green;
+    font-size: 30px;
+}
+
+.red{
+    color: red;
+    font-size: 30px;
+}
+
+
