@@ -1,11 +1,17 @@
-let playerChoice = document.getElementById("player-choice");
-let CpuChoice = document.getElementById("CPU-choice");
-let rockItem = document.getElementById("rock-item");
-let scissorItem = document.getElementById("scissor-item");
-let paperItem = document.getElementById("paper-item");
-let winLose = document.getElementById("win-lose");
+const playerChoice = document.getElementById("player-choice");
+const CpuChoice = document.getElementById("CPU-choice");
+const rockItem = document.getElementById("rock-item");
+const scissorItem = document.getElementById("scissor-item");
+const paperItem = document.getElementById("paper-item");
+const winLose = document.getElementById("win-lose");
+const playerScore = document.getElementById("score-player");
+const cpuScore = document.getElementById("score-cpu");
+const restartGame = document.getElementById("new-game")
+let scorePlayer = 0;
+let scoreCpu = 0;
 let userChoiceValue;
 let computerElement;
+let gameActive = true;
 
 function userChoice(callback) {
     const value1 = "✊"; // Rock
@@ -55,12 +61,38 @@ function determineResult() {
         (computerElement === "✌️" && userChoiceValue === "🫱") ||
         (computerElement === "🫱" && userChoiceValue === "✊")
     ) {
-        winLose.innerHTML = `<h1 class="green">${win}</h1>`;
-    } else {
         winLose.innerHTML = `<h1 class="red">${lose}</h1>`;
+        scoreCpu++
+        cpuScore.innerText = scoreCpu
+        
+    } else {
+        winLose.innerHTML = `<h1 class="green">${win}</h1>`;
+        scorePlayer++
+        playerScore.innerText = scorePlayer
     }
 }
 
 userChoice(function (choice) {
     console.log(choice);
 });
+
+
+function gameEnd(){
+    restartGame.addEventListener("click", function ()  {
+        gameActive = false;
+        scorePlayer = 0;
+        scoreCpu = 0;
+        playerChoice.innerText = ''
+        CpuChoice.innerText = ''
+        winLose.innerText = "Choose One!"
+        playerScore.innerText = scorePlayer
+        cpuScore.innerText = scoreCpu
+        console.log("button test")
+
+
+    })
+
+            
+}
+
+gameEnd()

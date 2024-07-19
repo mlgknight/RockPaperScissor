@@ -13,34 +13,42 @@
 
     <div class="container">
         <div class="intro-message">
-        <h1 class="logo">Rock Paper Scissor</h1>
+        <h1 class="logo">Paper Scissor</h1>
         <p>Try Your Luck!</p>
         </div>
-
-        <div class="labels">
-        <div class="label1">Player</div>
-        <div class="label2">CPU</div>
+            <div class="label-container">
+                <div class="labels">
+                <div class="label1">PLAYER</div>
+                <div class="label2">CPU</div>
+            </div>
+        </div>
+        <div class="score-container">
+            <div id="score-player" class="player-score">0</div>
+            <button id="new-game">New Game</button>
+            <div id="score-cpu" class="CPU-score">0</div>
         </div>
 
         <div class="game">
             <div class="box">
-            <h1 id="player-choice">"</h1>
+            <h1 id="player-choice"></h1>
 
             </div>
 
             <div 
             
             class=" hand box">
-            <h1 id="CPU-choice">"</h1>
+            <h1 id="CPU-choice"></h1>
 
             </div>
 
         </div>
         <div class="btm-things">
         <h1 id="win-lose" class="btm-text">Choose One!</h1>
-        <button id="rock-item">✊</button>
-        <button id="scissor-item">✌️</button>
-        <button id="paper-item">🫱</button>
+            <div class="choice-container">
+                <button id="rock-item">✊</button>
+                <button id="scissor-item">✌️</button>
+                <button id="paper-item">🫱</button>
+            </div>
         </div>
 
         <div>
